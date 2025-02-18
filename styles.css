@@ -1,0 +1,386 @@
+/* Nav */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  padding: 5px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  z-index: 1;
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+nav .logo img {
+  height: 25px;
+  width: auto;
+  margin-right: 10px;
+}
+nav .logo h1 {
+  font-size: 1.1rem;
+  background: linear-gradient(to right, #000000 0%, #000000 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  margin-left: 1.5rem;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 95%;
+  font-weight: 400;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: #f5f5f5;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 1px;
+  background-color: #1f1f1f;
+  display: block;
+  margin: 7px auto;
+  transition: all 0.3s ease-in-out;
+}
+.hamburger-active {
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.6s;
+  transform: rotate(45deg);
+}
+
+.hamburger-active .line:nth-child(2) {
+  width: 0px;
+}
+
+.hamburger-active .line:nth-child(1),
+.hamburger-active .line:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.hamburger-active .line:nth-child(1) {
+  transform: translateY(12px);
+}
+
+.hamburger-active .line:nth-child(3) {
+  transform: translateY(-5px) rotate(90deg);
+}
+
+.menubar {
+  position: absolute;
+  top: 0;
+  left: -60%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 60%;
+  height: 100vh;
+  padding: 20% 0;
+  background: rgba(255, 255, 255);
+  transition: all 0.5s ease-in;
+  z-index: 1000;
+}
+.active {
+  left: 0;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.menubar ul {
+  padding: 0;
+  list-style: none;
+}
+.menubar ul li {
+  margin-bottom: 32px;
+}
+
+.menubar ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 95%;
+  font-weight: 400;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.menubar ul li a:hover {
+  background-color: #f5f5f5;
+}
+@media screen and (max-width: 790px) {
+  .hamburger {
+    display: block;
+  }
+  nav ul {
+    display: none;
+  }
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background: #f0f0f0;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  color: #333;
+}
+
+#filter {
+  display: block;
+  width: 80%;
+  max-width: 400px;
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.thumbnail {
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+.photos{
+  margin-top: 2rem;
+}
+/* Modal Styles */
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex; /* Flex layout for centering content */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent content overflow */
+  z-index: 1000;
+  display: none; /* Initially hidden */
+}
+
+
+#imageInfo {
+  font-size: 1rem;
+  color: white;
+  max-width: 100%;
+  max-height: 100%;
+  text-align: center;
+  position: relative;
+}
+.info-container{
+  margin:4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+.image-description{
+  text-align: center;
+  color: white;
+  justify-self: end;
+}
+#imageInfo img {
+  max-width: 100%;
+  max-height: 70vh; /* Ensure image fits within the viewport */
+  object-fit: contain; /* Preserve aspect ratio */
+  display: block;
+  margin: 0 auto;
+}
+
+.show-location-btn {
+  position: absolute;
+  top: 1.3rem;
+  left: 2rem;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.show-location-btn:hover {
+  color: gray;
+}
+
+/* Map Styles */
+#map {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 80%;
+  display: none; /* Initially hidden */
+  z-index: 1; /* Put the map on top */
+}
+
+/* Close Button Styling */
+.close-btn {
+  position: absolute;
+  top: -0.5rem;
+  right: 2rem; /* Adjust to create space for the play button */
+  font-size: 3.4rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+
+
+/* Navigation Buttons */
+.nav-button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  display: block;
+  margin: 30px auto;
+  width: 4rem;
+  height: 4rem;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.nav-button:hover{
+  transform: scale(1.2);
+}
+/* Left Arrow */
+.nav-button.left {
+  transform: rotate(135deg);
+  right: 2rem;
+}
+
+/* Right Arrow */
+.nav-button.right {
+  
+  transform: rotate(-45deg);
+  left: 2rem;
+}
+
+/* Play Button Styling (Start Slideshow) */
+/* Play Button Styling (Start Slideshow) */
+.start-slideshow-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 5rem;
+  font-size: 2rem; /* Make the icon large */
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  transition: color 0.3s ease;
+  
+}
+
+.start-slideshow-button:hover {
+  color: #4caf50; /* Change color on hover */
+}
+
+/* Stop Slideshow Button */
+.slideshow-button {
+  cursor: pointer;
+  position: absolute;
+  top: 1.3rem;
+  right: 5rem;
+  background-color: rgba(0, 0, 0, 0);
+  width: 1.5rem;
+  height: 1.5rem;
+  box-sizing: border-box;
+  border-color: transparent transparent transparent white;
+  transition: all 100ms ease-in-out;
+  border-style: double;
+  border-width:0px 0px 0px 1.2rem;
+  transition: border-color 0.3s ease;
+}
+
+.slideshow-button:hover{
+  border-color: gray;
+}
+
+
+@media (max-width: 680px) {
+  #imageInfo img{
+    height: 55vh;
+  }
+  .info-container{
+    margin-bottom: 0;
+  }
+  .nav-button{
+    display: none;
+  }
+}
+@media (max-height: 680px) {
+  .image-description{
+    width: 15rem;
+  }
+  #imageInfo img{
+    height: 80vh;
+  }
+  .info-container{
+    margin-top: 0;
+    margin-bottom: 0;
+    flex-direction: row;
+  }
+  .nav-button{
+    display: none;
+  }
+}

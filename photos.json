@@ -1,0 +1,85 @@
+[
+  {
+    "fileName": "photo1.jpg",
+    "title": "Ja v horách Utahu",
+    "description": "Krásny pohľad na hory v USA.",
+    "dateTime": "2023-07-18T16:53:00Z",
+    "coordinates": { "latitude": 40.3908, "longitude": -111.6458 },
+    "path": "photos/photo1.jpg"
+  },
+  {
+    "fileName": "photo12.jpg",
+    "title": "Sestra s pani v horách",
+    "description": "Prechádzka v horách USA v Utahu na chodníku.",
+    "dateTime": "2023-07-18T15:48:00Z",
+    "coordinates": { "latitude": 40.3908, "longitude": -111.6458 },
+    "path": "photos/photo12.jpg"
+  }
+  ,
+  
+  {
+    "fileName": "photo3.jpg",
+    "title": "V horách s kamarátmi",
+    "description": "Fotka v horách Utahu-USA so sestrou a priateľmi.",
+    "dateTime": "2023-07-18T17:01:00Z",
+    "coordinates": { "latitude": 40.3908, "longitude": -111.6458 },
+    "path": "photos/photo3.jpg"
+  },
+  {
+    "fileName": "photo9.jpeg",
+    "title": "Navajo s priateľmi",
+    "description": "Výhľad na Navajo s priateľmi.",
+    "dateTime": "2024-09-09T14:11:00Z",
+    "coordinates": { "latitude": 37.8595, "longitude": 20.6249 },
+    "path": "photos/photo9.jpeg"
+  },
+  {
+    "fileName": "photo5.jpeg",
+    "title": "Big Buddha",
+    "description": "Pohľad na sochu Buddhy v Thajsku - Phuket",
+    "dateTime": "2024-01-29T06:11:00Z",
+    "coordinates": { "latitude": 7.8276, "longitude": 98.3128 },
+    "path": "photos/photo5.jpeg"
+  },
+  {
+    "fileName": "photo6.jpeg",
+    "title": "Loďka na Phi Phi ostrovoch.",
+    "description": "Fotka loďky a priezračného oceánu v Thajsku.",
+    "dateTime": "2024-02-01T16:25:00Z",
+    "coordinates": { "latitude": 7.7407, "longitude": 98.7784 },
+    "path": "photos/photo6.jpeg"
+  },
+  {
+    "fileName": "photo10.jpeg",
+    "title": "Západ slnka na skútri",
+    "description": "Ja na skútri v Thajsku - Phuket pri západe slnka.",
+    "dateTime": "2024-02-02T19:48:00Z",
+    "coordinates": { "latitude": 7.8966, "longitude": 98.3021 },
+    "path": "photos/photo10.jpeg"
+  },
+  {
+    "fileName": "photo7.jpeg",
+    "title": "Taxi v Hong Kongu",
+    "description": "Pohľad na taxík v Hong Kongu na ulici Lan Kwai Fong.",
+    "dateTime": "2024-02-05T22:48:00Z",
+    "coordinates": { "latitude": 22.2810, "longitude": 114.1557 },
+    "path": "photos/photo7.jpeg"
+  },
+  {
+    "fileName": "photo8.jpeg",
+    "title": "Nočné svietiace lampióny",
+    "description": "Fotka s Michaelom a lampiónmy v Hong Kongu na ulici Lan Kwai Fong.",
+    "dateTime": "2024-02-05T20:40:00Z",
+    "coordinates": { "latitude": 22.2810, "longitude": 114.1557 },
+    "path": "photos/photo8.jpeg"
+  },
+  {
+    "fileName": "photo4.jpeg",
+    "title": "Obchod s potravinami v Hong Kongu",
+    "description": "Pohľad na ľudí pred obchodom s potravinami v Hong Kongu na ulici Lan Kwai Fong.",
+    "dateTime": "2024-02-05T15:03:00Z",
+    "coordinates": { "latitude": 22.2810, "longitude": 114.1557 },
+    "path": "photos/photo4.jpeg"
+  }
+]
+

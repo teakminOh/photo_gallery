@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galéria</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <h1>Fotogaléria</h1>
+        </div>
+        <ul>
+          <li>
+            <a href="#">Galéria</a>
+          </li>
+          <li>
+            <a href="mapa.html">Mapa</a>
+          </li>
+          <li></li>
+        </ul>
+
+        <div class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </nav>
+      <div class="menubar">
+        <ul>
+          <li>
+            <a href="#">Galéria</a>
+          </li>
+          <li>
+            <a href="mapa.html">Mapa</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="photos">
+        <input type="text" id="filter" placeholder="Vyhľadajte fotografie..." />
+        <div id="gallery"></div>
+        <div id="modal" class="hidden">
+          <button id="showLocationButton" class="show-location-btn">
+            Show Location
+          </button>
+          <span id="closeModal" class="close-btn">&times;</span>
+          <!-- Start Slideshow Button next to Close Button -->
+          <button id="startSlideshow" class="start-slideshow-button">
+            &#9654;
+          </button>
+          <!-- Play Icon -->
+
+          <div class="info-container">
+            <div id="imageInfo">
+              <img id="fullImage" />
+              <div id="map"></div>
+            </div>
+            <div class="image-description">
+              <h2 id="imageTitle"></h2>
+              <p id="imageDescription"></p>
+              <p id="imageDateTime"></p>
+            </div>
+          </div>
+
+          <!-- Navigation Arrows -->
+          <button id="next" class="nav-button left"></button>
+          <button id="prev" class="nav-button right"></button>
+
+          <div class="slideshow-buttons">
+            <button
+              id="stopSlideshow"
+              class="slideshow-button"
+              style="display: none"
+            ></button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
